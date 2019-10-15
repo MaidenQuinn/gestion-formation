@@ -1,0 +1,69 @@
+<div id="form" class="bodyFormConnect">
+  <form class="inscriptionForm" fxLayout="column" [formGroup]="formRegister" (ngSubmit)="submitFormulaireInscription()">
+    <div fxLayout="column" fxLayoutAlign="none center">
+
+      <div fxLayout="row" fxLayout.xs="column" class="form-field-width" fxLayoutAlign="space-between center">
+        <div fxLayout="column" fxFlex="47" class="form-field-width" fxLayoutAlign="space-between center">
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="nom" type="text" class="form-control" id="nom" placeholder="Nom" [ngClass]="{ 'is-invalid': submitted && f.nom.errors }">
+            <mat-icon matPrefix>person</mat-icon>
+          </mat-form-field>
+          <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+            <div *ngIf="f.nom.errors.required" class="invalid-text">Le nom est requis!</div>
+          </div>
+        </div>
+        <div fxLayout="column" fxFlex="47" class="form-field-width" fxLayoutAlign="space-between center">
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="prenom" type="text" class="form-control" id="prenom" placeholder="Prénom"
+              [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }">
+            <mat-icon matPrefix>person</mat-icon>
+          </mat-form-field>
+          <div *ngIf="submitted && f.prenom.errors" class="invalid-feedback">
+            <div *ngIf="f.prenom.errors.required" class="invalid-text">Le prénom est requis!</div>
+          </div>
+        </div>
+
+      </div>
+
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="email" type="email" class="form-control" id="eMail" placeholder="E-Mail" email
+          [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+        <mat-icon matPrefix>email</mat-icon>
+      </mat-form-field>
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required" class="invalid-text">Le mail est requis!</div>
+      </div>
+
+      <mat-form-field appearance="outline">
+        <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" type="password" class="form-control"
+          id="motDePasse" placeholder="Mot de passe" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <mat-icon matPrefix>lock</mat-icon>
+        <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-hint>Dois contenir au minimum 6 caractères, dont 1 minuscule et 1 majuscule.</mat-hint>
+      </mat-form-field>
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback invalid-password">
+        <div *ngIf="f.password.errors.required" class="invalid-text">Le mot de passe est requis!</div>
+      </div>
+    </div>
+
+    <mat-checkbox formControlName="checkPpdp" class="form-control">Oui, je souhaite profiter pleinement de HGLearning
+      et recevoir des e-mails comportant des offres
+      exclusives, des recommandations personnalisées et des astuces d'apprentissage !</mat-checkbox>
+
+    <mat-checkbox [ngClass]="{ 'is-invalid': submitted && f.checkCgu.errors }" formControlName="checkCgu" class="form-control">J'ai
+      lu et j'accepte les <a href="">Conditions
+        Générales d'Utilisation</a> et la <a href="">Politique
+        de Protection des Données Personnelles</a></mat-checkbox>
+    <div *ngIf="submitted && f.checkCgu.errors" class="invalid-feedback">
+      <div *ngIf="f.checkCgu.errors.required" style="color:red;">Veuillez lire et accepter les conditions
+        d'utilisation!</div>
+    </div>
+
+    <div class="column" fxLayout="column" fxLayoutAlign="none center">
+      <button mat-flat-button type="submit" class="btn registerButton">S'INSCRIRE</button>
+    </div>
+  </form>
+  <div fxLayout="column">
+
+  </div>
+</div>

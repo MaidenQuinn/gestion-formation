@@ -1,0 +1,13 @@
+<div mat-dialog-content class="modalInscription">
+  <div mat-dialog-title class="modalInscriptionHeader" fxLayout="row" fxLayoutAlign="space-between center">
+    <h3>Inscrivez-vous pour profiter pleinement de toutes les fonctionnalités du site !</h3>
+    <button mat-icon-button (click)="CloseInscriptionModal()">
+      <mat-icon class="iconWidth" aria-label="Fermer la fenêtre">close</mat-icon>
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+  <app-social-inscription></app-social-inscription>
+  <app-form-inscription></app-form-inscription>
+  <mat-divider></mat-divider>
+  <p>Vous avez déjà un compte ? <a routerLink="/connexion" (click)="CloseInscriptionModal()">Connectez-vous</a> !</p>
+</div>

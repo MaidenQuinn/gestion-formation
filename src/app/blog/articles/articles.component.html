@@ -1,0 +1,28 @@
+<div class="bodyBlog" fxLayoutAlign="center">
+  <div fxLayout="column" fxLayoutGap="3%" fxLayoutAlign="center center" ngClass.lt-md="mobileBodyBlog">
+    <!-- fxFlex.gt-md="70" fxFlex.lt-lg="95" -->
+
+    <div fxLayout="column" fxLayoutAlign="center center" ngClass.gt-sm="mostPopularList"
+      ngClass.lt-md="mostPopularListXs">
+      <div fxLayout="column" ngClass.gt-sm="contentPopularList" fxLayoutAlign="center center">
+        <h1>Articles les mieux notés</h1>
+        <mat-divider class="mostPopularListMargin"></mat-divider>
+        <app-most-popular-list fxLayout="row" fxLayout.lt-md="column"></app-most-popular-list>
+      </div>
+    </div>
+
+    <div fxLayout="row" fxHide.gt-sm="true" class="test">
+      <app-blog-tags fxFlex="100" fxLayoutAlign="center" (tag)="addTodo($event)"></app-blog-tags>
+    </div>
+    <div fxLayout="row" ngClass.gt-sm="listeArticles" fxLayoutAlign="space-between" fxLayout.lt-md="column">
+      <app-article-list fxFlex="69" [selectedTags]="toto"></app-article-list>
+
+      <div fxLayout="column" fxFlex="29" fxLayoutGap="6%">
+        <app-blog-tags fxHide.lt-md="true" (tag)="addTodo($event)"></app-blog-tags>
+        <app-about-author></app-about-author>
+      </div>
+
+    </div>
+
+  </div>
+</div>

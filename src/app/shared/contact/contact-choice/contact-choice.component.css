@@ -1,0 +1,23 @@
+.textCenter {
+  text-align: center;
+}
+
+.contactButton {
+  border-color: #1f3d7d;
+  color: #1f3d7d;
+  font-size: 22px;
+  width: 200px;
+  margin: 5px;
+}
+
+.activeContactForm {
+  background-color: #1f3d7d;
+  color: white;
+  border-color: white;
+}
+
+.activeDevisForm {
+  background-color: #1f3d7d;
+  color: white;
+  border-color: white;
+}

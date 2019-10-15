@@ -1,0 +1,51 @@
+img {
+  max-height: 650px;
+}
+
+.contentSousTitre {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.tags {
+  text-decoration: underline;
+  color: #1f3d7d;
+}
+
+.tagItem {
+  margin: 3px;
+  
+}
+
+.lienCommentaire {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.titre {
+  margin: 5px;
+  font-size: 24px;
+}
+
+.descriptionImage {
+  margin: 0;
+  font-style: italic;
+  color: #1f3d7d;
+}
+
+.sousTitre {
+  margin-bottom: 3%;
+  color: #1f3d7d;
+}
+
+.tempsLecture {
+  border: 1px solid;
+  background-color: #1f3d7d;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.contenuArticle {
+  margin-top: 40px;
+}

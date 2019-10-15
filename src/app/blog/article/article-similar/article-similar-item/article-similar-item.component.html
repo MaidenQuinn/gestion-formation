@@ -1,0 +1,12 @@
+<div ngClass.gt-sm="container" ngClass.lt-md="containerXs">
+  <div class="imgCover">
+    <img src="{{similarArticle.imgUrl}}" alt="Logo Article Populaire">
+  </div>
+  <h2>{{similarArticle.titre}}</h2>
+  <div fxLayout="row" fxLayoutAlign="none center">
+    <p><span class="tags">Dans: </span></p>
+    <p class="tagItem" *ngFor="let tag of similarArticle.tags">"{{tag.label}}" </p>
+    <mat-divider></mat-divider>
+  </div>
+
+</div>

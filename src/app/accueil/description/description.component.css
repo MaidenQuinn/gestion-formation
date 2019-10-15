@@ -1,0 +1,14 @@
+.bodyDescription {
+  background-image: url('../../../assets/img/BannerAccueil.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+.contentDescription {
+  padding: 10%;
+}
+
+h1 {
+  color: #1f3d7d;
+}

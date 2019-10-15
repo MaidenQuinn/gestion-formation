@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center" class="textCenter">
+  <p>Un doute, une question, une suggestion ?<br>
+    Vous souhaitez un devis personnalisé pour votre entreprise ?</p>
+  <br>
+  <p>N'hésitez pas à nous contacter via ce formulaire !<br>
+    Je reste aussi disponible par téléphone du lundi au vendredi au : 00.00.00.00.00<br>
+    Si je ne répond pas, laissez moi un message avec vos coordonnées, et je vous recontacterai dès que possible.</p>
+
+  <p>Votre demande concerne :</p>
+  <div fxLayout="row" fxLayoutAlign="center" class="textCenter">
+    <button class="contactButton" mat-stroked-button [ngClass]="{'activeContactForm': showFormContact}"
+      (click)="showContact();">une question</button>
+    <button class="contactButton" mat-stroked-button [ngClass]="{'activeDevisForm': showFormDevis}"
+      (click)="showDevis();">un devis</button>
+  </div>
+  <p>Les champs marqués d'un astérisque (*) sont obligatoires et doivent être complété.</p>
+  <app-contact-form *ngIf="showFormContact"></app-contact-form>
+  <app-devis-form *ngIf="showFormDevis"></app-devis-form>
+</div>

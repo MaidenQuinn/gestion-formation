@@ -1,0 +1,15 @@
+<h4>Partager l'article</h4>
+<share-buttons fxHide.lt-md="true" 
+               [theme]="'circles-dark'" 
+               [include]="['facebook','twitter','linkedin']" 
+               [show]="3"
+               [showCount]="true" 
+               [url]="[route]"></share-buttons>
+
+<share-buttons fxHide.gt-sm="true" 
+               [theme]="'circles-dark'" 
+               [include]="['facebook','twitter','linkedin','whatsapp','sms', 'email', 'messenger']"
+               [show]="3" 
+               [showCount]="true" 
+               [size]="0" 
+               [url]="[route]"></share-buttons>

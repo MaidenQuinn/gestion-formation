@@ -1,0 +1,3 @@
+<a *ngFor="let similarArticle of similarArticles" [routerLink]="['/article', similarArticle.id]">
+  <app-article-similar-item [similarArticle]="similarArticle" class="imgContain" fxLayoutAlign.gt-sm="center center"></app-article-similar-item>
+</a>

@@ -1,0 +1,41 @@
+.article-card {
+  box-shadow: -1px 5px 15px -1px rgba(0, 0, 0, 0.78);
+}
+
+.noDecoration {
+  text-decoration: none;
+}
+
+.titre {
+  font-size: 24px;
+  color: black;
+}
+
+.sousTitre {
+  color: #1f3d7d
+}
+
+mat-icon {
+  color: #efbf5e;
+}
+
+.tempsLecture {
+  border: 1px solid;
+  background-color: #1f3d7d;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.articleButton {
+  font-weight: bolder;
+  color: #1f3d7d;
+}
+
+.imageArticle {
+  width: 98%;
+}
+
+.imageCard {
+  margin-top: 3%;
+}

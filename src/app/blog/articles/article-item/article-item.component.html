@@ -1,0 +1,27 @@
+<div lass="article-card">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><a class="noDecoration titre" [routerLink]="['/article', articleItem.id]">{{articleItem.titre}}</a></mat-card-title>
+      <mat-card-subtitle>
+        <a fxLayout="row" class="noDecoration sousTitre" fxLayoutAlign="none center" [routerLink]="['/article', articleItem.id]">
+          {{articleItem.datePublication | date:"d MMMM yyyy"}} | par {{articleItem.auteur}} |
+          <span class="tempsLecture" fxLayoutAlign="none center">
+            <mat-icon>access_time</mat-icon> 10min
+          </span>
+          | <mat-icon>star</mat-icon> {{articleItem.note}}/5</a>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <div fxLayout="column">
+      <a class="noDecoration imageCard" fxLayoutAlign="center center" [routerLink]="['/article', articleItem.id]">
+        <img class="imageArticle" mat-card-image src="{{articleItem.imgUrl}}" alt="Image de l'article"></a>
+    </div>
+    <mat-card-content>
+      <p style="text-align:justify">
+        {{articleItem.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button class="articleButton" [routerLink]="['/article', articleItem.id]">LIRE PLUS</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

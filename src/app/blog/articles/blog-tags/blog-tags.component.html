@@ -1,0 +1,15 @@
+<div ngClass="bodyTags">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <h2>Filtrer par Mots-clés</h2>
+    <mat-chip-list>
+      <mat-chip *ngFor="let tag of tagItems"  
+                [selectable]="selectable" 
+                [ngStyle]="{'cursor': 'pointer'}"
+                [style.background-color]="getBackgroundColor(tag)" 
+                [style.color]="getColor(tag)"
+                [style.border]="getBorderColor(tag)" 
+                (click)="selectTag(tag)">
+                {{tag.label}}</mat-chip>
+    </mat-chip-list>
+  </div>
+</div>

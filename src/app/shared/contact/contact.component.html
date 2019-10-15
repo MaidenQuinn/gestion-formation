@@ -1,0 +1,13 @@
+<div class="bodyContact">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <h1>Contactez-nous !</h1>
+
+    <div *ngIf="showButtonContact" fxLayout="column" fxLayoutAlign="center center">
+      <p style="text-align: center; margin-bottom: 40px;">Pour toute demande de devis personnalisé où si vous avez la
+        moindre <br>question, notre formulaire de contact
+        est disponible.</p>
+      <button class="contactButton" mat-stroked-button color="primary" (click)="showFormContact();">Nous contacter</button>
+    </div>
+  </div>
+  <app-contact-choice *ngIf="showContactChoice"></app-contact-choice>
+</div>

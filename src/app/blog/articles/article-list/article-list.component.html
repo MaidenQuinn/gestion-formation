@@ -1,0 +1,8 @@
+<div class="pagination" fxLayout="column" fxLayoutAlign="none center">
+  <div *ngFor="let articleItem of activePageDataChunk">
+    <app-article-item [articleItem]="articleItem"></app-article-item>
+    <mat-divider class="articleListMargin"></mat-divider>
+  </div>
+  <mat-paginator paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [showFirstLastButtons]="true"
+    [length]="totalSize" [pageIndex]="currentPage" (page)="pageEvent = handlePage($event)" showFirstLastButtons></mat-paginator>
+</div>

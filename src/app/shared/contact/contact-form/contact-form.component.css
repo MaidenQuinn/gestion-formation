@@ -1,0 +1,40 @@
+
+mat-form-field { 
+  margin-top: 20px;
+}
+
+.containerContactForm {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #fbfbfb;
+  color: black;
+  border-radius: 5px;
+}
+
+.formWidth {
+  width: 80%;
+}
+
+.sendSuccess {
+  background-color: white;
+  color: black;
+  padding: 25px;
+  border-radius: 10px;
+
+}
+
+.sendButton {
+  width: 150px;
+  margin: 5px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #1f3d7d;
+  color: white;
+}
+
+.containerMessageSend {
+  padding: 2%;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}

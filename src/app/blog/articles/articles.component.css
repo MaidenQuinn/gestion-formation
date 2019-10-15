@@ -1,0 +1,22 @@
+.contentPopularList {
+  width: 70%;
+  color: white;
+}
+
+.mostPopularList {
+  background-color: #1f3d7d;
+  width: 100%;
+  padding-bottom: 2%;
+}
+
+.bodyBlog {
+  background-color: #fafafa;
+}
+
+.listeArticles {
+  width: 70%;
+}
+
+.mobileBodyBlog {
+  width: 90%;
+}

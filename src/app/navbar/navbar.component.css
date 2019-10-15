@@ -1,0 +1,162 @@
+/* Supprime l'effet de barre qui remonte en version tablette portrait */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  ::ng-deep .mat-form-field-infix {
+    border-top: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+}
+
+/* Partie Navbar Desktop */
+.navbar-desktop {
+  background-color: white;
+  height: 90px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.navlink {
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
+}
+
+.logo-navbar {
+  height: 50px;
+}
+
+.authButton {
+  width: 150px;
+  margin: 5px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.search-field {
+  font-size: 16px;
+  margin: 0 0 -20px 30px;
+  min-width: 70%;
+}
+
+.toolbarWidth {
+  width: 100%;
+  padding: 0;
+}
+
+/* Partie Sidenav Mobile */
+.toolbarXs {
+  position: fixed;
+  height: 64px;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.logo-navbar-mobile {
+  height: 40px;
+}
+
+.contentMobile {
+  margin-top: 64px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.contentDesktop {
+  margin-top: 0;
+  background-color: white;
+}
+
+.ButtonAuthRowXs {
+  margin: 15px;
+}
+
+.authButtonXs {
+  width: 130px;
+  height: 45px;
+  font-size: 16px;
+}
+
+.activeSearchBarXs {
+  height: 130px;
+}
+
+.toolbarWidthXs {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0;
+}
+
+/* CSS TABLETTES */
+
+.activeSearchBarMd {
+  height: 146px;
+}
+
+.toolbarMd {
+  position: fixed;
+
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.searchFieldMd {
+  width: 80%;
+}
+
+.searchbarMd {
+  width: 80%;
+}
+
+.searchButtonTablet {
+  margin-left: 15px;
+  font-size: 2vh
+}
+
+/* CSS commun aux versions desktop et responsive */
+.inscriptionButton {
+  background-color: #1f3d7d;
+  color: white;
+}
+
+.connexionButton {
+  color: #1f3d7d;
+  border-color: #1f3d7d;
+}
+
+.homeLogo {
+  text-decoration: none;
+  color: #1f3d7d;
+}
+
+.navlink:hover {
+  color: #1464f6;
+}
+
+.navlinkLogo:hover {
+  color: #1464f6;
+}
+
+.router-link-active {
+  color: #1464f6;
+}
+
+.toolbar-icon {
+  color: #1f3d7d;
+}
+
+.shopIconSize {
+  margin-right: 15px;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}

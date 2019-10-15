@@ -1,0 +1,18 @@
+.btn-facebook {
+  background-color: #3b5998;
+}
+
+.btn-google {
+  background-color: #d62d20;
+}
+
+.btn-social {
+  border: none;
+  width: 40%;
+  height: 50px;
+  font-size: 2vh;
+  color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,86 @@
+<!-- NAVBAR-DESKTOP -->
+
+<mat-toolbar ngClass.gt-sm="navbar-desktop" class="toolbarMd" 
+             fxHide.lt-md="true" fxLayout.md="column" fxLayoutAlign.md="center none" 
+             [ngClass.md]="{'activeSearchBarMd': showRecherche}">
+  <div fxLayout.md="row" ngClass.gt-md="toolbarWidth" ngClass.md="toolbarWidthMd" fxLayoutAlign="space-between center">
+    <div fxLayoutAlign="none center">
+      <a routerLink="/" class="homeLogo" fxLayoutAlign="none center">
+        <img class="logo-navbar" src="../assets/img/LogoZen.png" alt="Logo">
+        HGLearning
+      </a>
+      <a class="navlink" routerLink="/blog" routerLinkActive="router-link-active">Blog</a>
+      <a class="navlink" routerLink="/formations" routerLinkActive="router-link-active">Formations</a>
+      <mat-form-field fxHide.md="true" ngClass.gt-md="search-field searchbar" appearance="outline">
+        <mat-label>Recherche</mat-label>
+        <mat-icon class="toolbar-icon" matPrefix>searchbar</mat-icon>
+        <input type="search" matInput placeholder="Recherche">
+      </mat-form-field>
+      <button mat-icon-button ngClass.md="searchButtonTablet" fxHide.gt-md="true" (click)="toggleSearchBar()">
+        <mat-icon class="toolbar-icon">search</mat-icon>
+      </button>
+    </div>
+    <div fxLayoutAlign="none center">
+      <mat-icon class="toolbar-icon shopIconSize">shopping_cart</mat-icon>
+      <button class="authButton connexionButton" mat-stroked-button (click)="openConnectModal()">Se connecter</button>
+      <button class="authButton inscriptionButton" mat-raised-button (click)="openRegisterModal()">S'inscrire</button>
+    </div>
+  </div>
+
+  <div fxLayout.md="row" fxHide.gt-md="true" fxLayoutAlign="center" 
+      ngClass.gt-md="search-field" ngClass.md="searchFieldMd">
+    <mat-form-field *ngIf="showRecherche" ngClass.gt-md="searchbar" ngClass.md="searchbarMd">
+      <input matInput placeholder="Recherche">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+</mat-toolbar>
+
+<!-- NAVBAR MOBILE -->
+
+<div class="containerXs">
+  <mat-toolbar fxLayout="column" fxHide.gt-sm="true" class="toolbarXs" [ngClass]="{'activeSearchBarXs': showRecherche}">
+    <div fxLayout="row" class="toolbarWidthXs" fxLayoutAlign="space-between center">
+      <div class="leftButton">
+        <button mat-icon-button (click)="closeSearchBar(); snav.toggle();">
+          <mat-icon class="toolbar-icon">menu</mat-icon>
+        </button>
+        <button mat-icon-button (click)="snav.close(); toggleSearchBar();">
+          <mat-icon class="toolbar-icon">search</mat-icon>
+        </button>
+      </div>
+      <a routerLink="/" class="homeLogo" fxLayoutAlign="none center">
+        <img class="logo-navbar-mobile" src="../assets/img/LogoZen.png" alt="Logo">
+        HGLearning
+      </a>
+      <span class="toolbar-spacer"></span>
+      <mat-icon routerLink="/formation" class="toolbar-icon">shopping_cart</mat-icon>
+    </div>
+    <div fxLayout="row" class="toolbarWidth">
+      <mat-form-field *ngIf="showRecherche" fxFlex='100'>
+        <input matInput placeholder="Recherche">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #snav [mode]="over" fxHide.gt-sm="true" [fixedInViewport]="true" fixedTopGap="56">
+      <mat-nav-list>
+        <a mat-list-item class="navlink" routerLink="/blog" routerLinkActive="router-link-active">Blog</a>
+        <a mat-list-item class="navlink" routerLink="/formations" routerLinkActive="router-link-active">Formations</a>
+        <div class="ButtonAuthRowXs">
+          <button routerLink="/inscription" mat-raised-button class="authButtonXs inscriptionButton">S'inscrire</button>
+        </div>
+        <div class="ButtonAuthRowXs">
+          <button routerLink="/connexion" mat-stroked-button class="authButtonXs connexionButton">Se connecter</button>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+<!-- ROUTEUR COMMUN -->
+    <mat-sidenav-content ngClass.lt-md="contentMobile" ngClass.gt-sm="contentDesktop">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

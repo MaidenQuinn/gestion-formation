@@ -1,0 +1,18 @@
+.bodyTags {
+  box-shadow: -1px 5px 15px -1px rgba(0, 0, 0, 0.78);
+  border-radius: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
+mat-chip-list {
+  padding: 25px;
+}
+
+mat-chip {
+  user-select: none;
+}
+
+h2 {
+  color: #1f3d7d;
+}

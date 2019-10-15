@@ -1,0 +1,3 @@
+<a *ngFor="let mostPopularItem of mostPopularItems" [routerLink]="['/article', mostPopularItem.id]">
+  <app-most-popular-item [mostPopularItem]="mostPopularItem" class="imgContain" fxLayoutAlign.gt-sm="center center"></app-most-popular-item>
+</a>

@@ -1,0 +1,56 @@
+<div class="formContent" fxLayoutAlign="center center">
+  <div class="containerContactForm" fxLayoutAlign="center" fxFlex="50" fxFlex.xs="90" *ngIf="!post; else forminfo"
+    novalidate>
+    <form fxLayout="column" class="form formWidth" [formGroup]="formContact" (ngSubmit)="onSubmit()">
+
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between">
+        <mat-form-field class="form-element" appearance="outline" fxFlex.gt-md="45">
+          <mat-label>Votre nom</mat-label>
+          <input matInput placeholder="Votre nom" formControlName="nom" required>
+          <mat-error *ngIf="!formContact.controls['nom'].valid && formContact.controls['nom'].touched">
+            Champ requis. Veuillez entrer un nom.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex.gt-md="45">
+          <mat-label>Votre e-mail</mat-label>
+          <input matInput placeholder="Votre e-mail" formControlName="email" required>
+          <mat-error *ngIf="!formContact.controls['email'].valid && formContact.controls['email'].touched">
+            {{ getErrorEmail() }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Sujet</mat-label>
+        <input matInput placeholder="Sujet" formControlName="sujet" required>
+        <mat-error *ngIf="!formContact.controls['sujet'].valid && formContact.controls['sujet'].touched">
+          Champ requis. Veuillez entrer un sujet.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Votre message</mat-label>
+        <textarea matInput placeholder="Votre message" formControlName="message" matTextareaAutosize
+          matAutosizeMinRows=5 matAutosizeMaxRows=10 required></textarea>
+        <mat-error *ngIf="!formContact.controls['message'].valid && formContact.controls['message'].touched">
+          Champ requis. Veuillez entrer un message.
+        </mat-error>
+      </mat-form-field>
+
+      <div class="form-element">
+        <button mat-raised-button color="primary" type="submit" class="sendButton"
+          [disabled]="!formContact.valid">Envoyer</button>
+      </div>
+
+      <div *ngIf="loading">
+        <img src="/assets/img/loading.gif" alt="">
+      </div>
+
+    </form>
+  </div>
+
+  <ng-template #forminfo>
+    <app-alert class="sendSuccess"></app-alert>
+  </ng-template>
+
+</div>

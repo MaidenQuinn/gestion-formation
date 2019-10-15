@@ -1,0 +1,13 @@
+<div mat-dialog-content>
+  <div mat-dialog-title class="modalConnexionHeader" fxLayout="row" fxLayoutAlign="space-between center">
+    <h3>Connectez-vous à votre compte HGLearning !</h3>
+    <button mat-icon-button (click)="CloseConnexionModal()">
+      <mat-icon class="iconWidth" aria-label="Fermer la fenêtre">close</mat-icon>
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+  <app-social-connexion></app-social-connexion>
+  <app-form-connexion></app-form-connexion>
+  <mat-divider></mat-divider>
+  <p>Vous n'avez pas de compte ? <a routerLink="/inscription" (click)="CloseConnexionModal()">Inscrivez-vous</a> gratuitement.</p>
+</div>

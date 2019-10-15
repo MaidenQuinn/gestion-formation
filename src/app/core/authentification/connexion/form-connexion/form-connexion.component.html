@@ -1,0 +1,28 @@
+<div id="form" class="bodyFormConnect">
+  <form class="connexionForm" fxLayout="column" [formGroup]="formConnect" (ngSubmit)="submitFormulaireConnexion()">
+    <div class="column" fxLayout="column" fxLayoutAlign="none center">
+      <div *ngIf="isLoginFailed">
+        <p id="loginFailed">Email ou mot de passe non valide.</p>
+      </div>
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="email" type="email" class="form-control" id="eMail" placeholder="E-Mail"
+          [ngClass]="{ 'is-invalid': f.email.errors }">
+        <mat-icon matPrefix>email</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="password" type="password" class="form-control" id="motDePasse" placeholder="Mot de passe"
+          [ngClass]="{ 'is-invalid': f.password.errors }">
+        <mat-icon matPrefix>lock</mat-icon>
+      </mat-form-field>
+    </div>
+    <mat-checkbox>Se souvenir de moi</mat-checkbox>
+    <a href="">Mot de passe oublié</a>
+    <div class="column" fxLayout="column" fxLayoutAlign="none center">
+      <button mat-flat-button type="submit" class="btn connectButton">Se connecter</button>
+    </div>
+  </form>
+  <div fxLayout="column">
+
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="bodyArticleContent" fxLayoutAlign="center" *ngIf="article">
+  <div class="bodyContent" fxLayout="column" fxFlex.gt-md="70" fxFlex.lt-lg="95">
+    <div fxLayout="column">
+      <app-article-content [article]="article"></app-article-content>
+      <div class="bodyContent" fxLayout="column" fxFlex.gt-sm='60' fxFlex.lt-md="100">
+        <div fxLayout.gt-xs="row" fxLayout.lt-sm="column">
+          <div ngClass.gt-xs="marginShare">
+            <app-article-share></app-article-share>
+          </div>
+          <div>
+            <app-article-note></app-article-note>
+          </div>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+
+      <div fxLayout="column" fxLayoutAlign="center center" ngClass.gt-sm="mostPopularList"
+        ngClass.lt-md="mostPopularListXs">
+        <div fxLayout="column" ngClass.gt-sm="contentPopularList" fxLayoutAlign="center center">
+          <h1>Articles similaires</h1>
+          <mat-divider class="mostPopularListMargin"></mat-divider>
+          <app-article-similar [article]="article" fxLayout="row" fxLayout.lt-md="column"></app-article-similar>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+
+    </div>
+  </div>
+
+</div>
